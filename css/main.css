@@ -211,7 +211,7 @@
 .container .last-news__main {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   width: 100%;
   margin-top: 111px;
@@ -221,7 +221,7 @@
   width: 312px;
   height: 320px;
   position: relative;
-  margin: 0 19px 19px 0;
+  margin: 0 14px 14px 0;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -230,11 +230,6 @@
 }
 .container .last-news__main .card:hover img {
   transform: scale(1.1);
-}
-.container .last-news__main .card:nth-child(4),
-.container .last-news__main .card:nth-child(8),
-.container .last-news__main .card:nth-child(12) {
-  margin-right: 0;
 }
 .container .card-overlay {
   position: absolute;
