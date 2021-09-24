@@ -279,6 +279,7 @@
   flex-wrap: wrap;
 }
 .container .all-news .main-news {
+  display: inline-block;
   width: 525px;
   height: 440px;
   position: relative;
@@ -298,12 +299,27 @@
   width: 100%;
 }
 .container .all-news .recommend-news {
+  display: flex;
+  flex-wrap: wrap;
   width: 57%;
   margin-left: 25px;
 }
 .container .all-news .recommend-news .row {
   display: flex;
   margin: 0 0 25px 0;
+}
+.container .all-news .recommend-news .row .img-block {
+  display: inline-table;
+  border-radius: 8px;
+  width: 255px;
+  height: 204px;
+  overflow: hidden;
+}
+.container .all-news .recommend-news .row .img-block img {
+  transition: all 0.3s;
+}
+.container .all-news .recommend-news .row .img-block img:hover {
+  transform: scale(1.1);
 }
 .container .all-news .recommend-news .row .row-info {
   margin-left: 16px;
@@ -333,6 +349,59 @@
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.1px;
+}
+
+@media only screen and (min-width: 706px) {
+  .last-news__selects {
+    justify-content: flex-start !important;
+  }
+}
+@media only screen and (max-width: 1414px) {
+  .container .navbar {
+    padding: 23.5px 20px;
+  }
+  .container .last-news {
+    padding: 50px 20px;
+  }
+  .container .last-news .last-news__selects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .container .last-news .last-news__selects .select_mate {
+    margin-bottom: 10px;
+  }
+  .container .last-news .last-news__main {
+    margin-top: 0;
+  }
+  .container .all-news {
+    padding: 0 20px;
+  }
+  .container .all-news .all-news__main {
+    justify-content: center;
+  }
+  .container .all-news .main-news {
+    width: auto;
+    margin-right: 20px;
+  }
+  .container .all-news .recommend-news {
+    width: auto;
+    margin: 10px 0;
+    justify-content: center;
+  }
+  .container .all-news .recommend-news .row {
+    flex-wrap: wrap;
+    width: 255px;
+    margin-right: 20px;
+  }
+  .container .all-news .recommend-news .row .news-title {
+    padding-right: 0 !important;
+  }
+}
+@media only screen and (max-width: 676px) {
+  .last-news__main .card {
+    margin-right: 0;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

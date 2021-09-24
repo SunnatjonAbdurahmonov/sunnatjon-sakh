@@ -336,6 +336,7 @@ $red: #fa5948;
     }
 
     .main-news {
+      display: inline-block;
       width: 525px;
       height: 440px;
       position: relative;
@@ -360,12 +361,27 @@ $red: #fa5948;
     }
 
     .recommend-news {
+      display: flex;
+      flex-wrap: wrap;
       width: 57%;
       margin-left: 25px;
-      //   padding-right: 33px;
       .row {
         display: flex;
         margin: 0 0 25px 0;
+
+        .img-block {
+          display: inline-table;
+          border-radius: 8px;
+          width: 255px;
+          height: 204px;
+          overflow: hidden;
+          img {
+            transition: all 0.3s;
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+        }
 
         .row-info {
           margin-left: 16px;
@@ -397,6 +413,74 @@ $red: #fa5948;
           }
         }
       }
+    }
+  }
+}
+
+@media only screen and (min-width: 706px) {
+  .last-news__selects {
+    justify-content: flex-start !important;
+  }
+}
+
+@media only screen and (max-width: 1414px) {
+  .container {
+    .navbar {
+      padding: 23.5px 20px;
+    }
+
+    .last-news {
+      padding: 50px 20px;
+
+      .last-news__selects {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .select_mate {
+          margin-bottom: 10px;
+        }
+      }
+
+      .last-news__main {
+        margin-top: 0;
+      }
+    }
+
+    .all-news {
+      padding: 0 20px;
+
+      .all-news__main {
+        justify-content: center;
+      }
+
+      .main-news {
+        width: auto;
+        margin-right: 20px;
+      }
+
+      .recommend-news {
+        width: auto;
+        margin: 10px 0;
+        justify-content: center;
+
+        .row {
+          flex-wrap: wrap;
+          width: 255px;
+          margin-right: 20px;
+
+          .news-title {
+            padding-right: 0 !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 676px) {
+  .last-news__main {
+    .card {
+      margin-right: 0;
     }
   }
 }
