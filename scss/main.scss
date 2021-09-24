@@ -1,0 +1,320 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+// * colors
+$dark-blue: #00264d;
+$sky-blue: #0073ff;
+$red: #fa5948;
+
+.active_select {
+  padding: 8px;
+}
+
+// * Fonts
+@mixin roboto-normal {
+  font-family: Roboto, "sans-serif";
+  font-weight: 400;
+}
+
+@mixin roboto-600 {
+  font-family: Roboto, "sans-serif";
+  font-weight: 600;
+}
+
+@mixin roboto-bold {
+  font-family: Roboto, "sans-serif";
+  font-weight: 700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  // * ------------------------------ Navbar styles ------------------------------
+  .navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    padding: 23.5px 60px;
+
+    .nav-list {
+      display: flex;
+      align-items: center;
+      list-style: none;
+
+      .nav-item {
+        margin-left: 24px;
+        color: $red;
+        cursor: pointer;
+        a {
+          color: $red;
+        }
+      }
+
+      // * ------------------------------ Select styles ------------------------------
+      .icon_select_mate {
+        position: absolute;
+        top: 10px;
+        right: 2%;
+        font-size: 16px;
+        height: 22px;
+        transition: all 275ms;
+        cursor: pointer;
+      }
+
+      .select_mate {
+        position: relative;
+        float: left;
+        width: 70px;
+        padding: 0 10px;
+        height: auto;
+        color: #777;
+        font-weight: 300;
+        background-color: #fff;
+        border-radius: 3px;
+        transition: all 375ms ease-in-out;
+        text-transform: uppercase;
+        @include roboto-normal();
+        select {
+          position: absolute;
+          overflow: hidden;
+          height: 0px;
+          opacity: 0;
+          z-index: -1;
+        }
+      }
+
+      .cont_list_select_mate {
+        position: relative;
+        float: left;
+        width: 100%;
+      }
+
+      .cont_select_int {
+        position: absolute;
+        left: -10px;
+        top: 0px;
+        z-index: 999;
+        overflow: hidden;
+        height: 0px;
+        width: 70px;
+        background: #ffffff;
+        box-shadow: 0px 1px 2px rgba(47, 137, 250, 0.08),
+          0px 3px 20px rgba(26, 70, 125, 0.1);
+        border-radius: 4px;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        border-radius: 0px 0px 3px 3px;
+        transition: all 375ms ease-in-out;
+        text-transform: uppercase;
+
+        li {
+          position: relative;
+          float: left;
+          width: 100%;
+          list-style-type: none;
+          padding: 10px 12px;
+          margin: 0px;
+          transition: all 275ms ease-in-out;
+          display: block;
+          cursor: pointer;
+          border-radius: 4px;
+
+          &:last-child {
+            border-radius: 3px;
+            border-bottom: 0px;
+          }
+          &:hover {
+            background-color: #edf5ff;
+            color: $sky-blue;
+          }
+        }
+
+        .active {
+          background-color: #edf5ff;
+          color: $sky-blue;
+        }
+      }
+
+      .selecionado_opcion {
+        padding: 10px 2%;
+        display: block;
+        margin: 0px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  // * ------------------------------ Last news styles ------------------------------
+  .last-news {
+    padding: 72px 60px;
+
+    .last-news-title {
+      @include roboto-600;
+      font-size: 24px;
+      line-height: 40px;
+      margin-bottom: 40px;
+    }
+  }
+
+  // * Select styles
+  .last-news__selects {
+    .icon_select_mate {
+      position: absolute;
+      top: 10px;
+      right: 2%;
+      font-size: 16px;
+      height: 22px;
+      transition: all 275ms;
+      cursor: pointer;
+    }
+
+    .select_mate {
+      position: relative;
+      float: left;
+      width: 172px;
+      padding: 0 10px;
+      height: auto;
+      font-family: "Roboto";
+      color: #4f4f4f;
+      font-weight: 300;
+      background: #f5f5f5;
+      border-radius: 3px;
+      transition: all 375ms ease-in-out;
+      list-style: none;
+      border-radius: 4px;
+      margin-right: 12px;
+      select {
+        position: absolute;
+        overflow: hidden;
+        height: 0px;
+        opacity: 0;
+        z-index: -1;
+      }
+    }
+
+    .cont_list_select_mate {
+      position: relative;
+      float: left;
+      width: 100%;
+    }
+
+    .cont_select_int {
+      position: absolute;
+      left: -10px;
+      top: 0px;
+      z-index: 999;
+      overflow: hidden;
+      height: 0px;
+      width: 172px;
+      background: #ffffff;
+      box-shadow: 0px 1px 2px rgba(47, 137, 250, 0.08),
+        0px 3px 20px rgba(26, 70, 125, 0.1);
+      border-radius: 4px;
+      margin-bottom: 0px;
+      margin-top: 0px;
+      border-radius: 0px 0px 3px 3px;
+      transition: all 375ms ease-in-out;
+      margin-top: 8px;
+
+      li {
+        position: relative;
+        float: left;
+        width: 100%;
+        list-style-type: none;
+        padding: 10px 12px;
+        margin: 0px;
+        transition: all 275ms ease-in-out;
+        display: block;
+        cursor: pointer;
+        border-radius: 4px;
+
+        &:last-child {
+          border-radius: 3px;
+          border-bottom: 0px;
+        }
+        &:hover {
+          background-color: #edf5ff;
+          color: $sky-blue;
+        }
+      }
+
+      .active {
+        background-color: #edf5ff;
+        color: $sky-blue;
+      }
+    }
+
+    .selecionado_opcion {
+      padding: 10px 2%;
+      display: block;
+      margin: 0px;
+      cursor: pointer;
+    }
+  }
+  // * Main styles
+  .last-news__main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 111px;
+
+    .card {
+      display: inline-block;
+      width: 312px;
+      height: 320px;
+      background-image: url(../images/news-card-img.png);
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      margin: 0 19px 19px 0;
+      border-radius: 8px;
+
+      .card-overlay {
+        position: absolute;
+        bottom: 0;
+        color: #fff;
+        padding: 16px;
+
+        .data {
+          @include roboto-normal();
+          display: flex;
+          align-items: center;
+          font-size: 14px;
+          line-height: 24px;
+          svg {
+            margin-right: 8px;
+          }
+
+          span {
+            display: inline-block;
+            margin: 0 16px;
+            font-size: 25px;
+          }
+        }
+
+        .card-desc {
+          @include roboto-bold();
+          font-size: 15px;
+          line-height: 24px;
+          letter-spacing: 0.1px;
+          margin-top: 8px;
+        }
+      }
+    }
+
+    .card:nth-child(4),
+    .card:nth-child(8),
+    .card:nth-child(12) {
+      margin-right: 0;
+    }
+  }
+
+  // * ------------------------------ All news styles ------------------------------
+}
